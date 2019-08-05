@@ -1,3 +1,14 @@
 <%= form_for @recipe do |f| %>
-  Title: <%= f.text_field :title %>
+  <%= f.label :title%>
+  <%= f.text_field :title %><br>
+  <label>1st Ingredient Quantity</label><br>
+  <input id='recipe_ingredients_attributes_0_quantity' type='text' name='recipe[ingredients_attributes][quantity]'></input><br>
+  <label>1st Ingredient Name</label><br>
+  <input id='recipe_ingredients_attributes_0_name' type='text' name='recipe[ingredients_attributes][name]'></input><br>
+  <label>2nd Ingredient Quantity</label><br>
+  <input id='recipe_ingredients_attributes_1_quantity' type='text' name='recipe[ingredients_attributes][quantity]'></input><br>
+  <label>2nd Ingredient Name</label><br>
+  <input id='recipe_ingredients_attributes_1_name' type='text' name='recipe[ingredients_attributes][name]'></input><br>
+  
+  <%= f.submit%>
 <% end %>
